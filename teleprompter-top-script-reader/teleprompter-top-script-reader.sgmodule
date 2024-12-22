@@ -1,0 +1,9 @@
+#!name=Teleprompter Top Script Reader
+#!desc=Lifetime for Teleprompter Top Script Reader
+#!system=ios, ipad
+
+[Script]
+Teleprompter = type=http-request,pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*,script-path=teleprompter-top-script-reader.js,requires-body=0,max-size=0
+
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com
